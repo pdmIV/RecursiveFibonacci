@@ -1,4 +1,8 @@
 # This is a recursive algorithm, meaning that the function is called within itself
+from numba import jit
+# 7.31.23 - I added the numba module to speed up calculations. The effect is dramatic
+
+@jit(nopython=True)
 def Fibonacci(n):
   if n <= 1:
     return n
